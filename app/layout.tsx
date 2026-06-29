@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { VT323, Press_Start_2P } from 'next/font/google';
 import { Navbar } from '@/components/site/navbar';
 import { Footer } from '@/components/site/footer';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const vt323 = VT323({
   subsets: ['latin'],
@@ -49,6 +50,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
+        <SpeedInsights />
       </body>
     </html>
   );
